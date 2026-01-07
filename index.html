@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CYBER FACE IDENTIFIER</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <script>
+    if (!localStorage.getItem("demoSession")) {
+      window.location.href = "login.html";
+    }
+  </script>
+
+  <script src="https://unpkg.com/face-api.js"></script>
+  <script src="fakeData.js"></script>
+  <script defer src="script.js"></script>
+</head>
+<body>
+
+<div class="scanlines"></div>
+
+<div class="container wide">
+  <h1>🧠 FACE IDENTIFICATION DEMO</h1>
+  <p class="warning">
+    ⚠ SIMULATED DATA ONLY • NO REAL PEOPLE • NO GOVERNMENT USE
+  </p>
+
+  <input type="file" id="upload" accept="image/*">
+
+  <div class="result" id="result">
+    <p>Status: Waiting for image...</p>
+  </div>
+
+  <button onclick="logout()">LOGOUT</button>
+</div>
+
+</body>
+</html>
